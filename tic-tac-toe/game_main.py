@@ -45,9 +45,10 @@ class TicTacToe:
         if len(bottom_diag) == 1 and None not in top_diag:
             return print(f"{bottom_diag[0]} won")
 
+        #  if all cells are filled and still no winner
         if all([all(i) for i in self.board]):
             return print("It's a tie")
-        
+
     def next_move(self):
         #  autofill empty cell as a next move with next symbol
         free_indexes = []
